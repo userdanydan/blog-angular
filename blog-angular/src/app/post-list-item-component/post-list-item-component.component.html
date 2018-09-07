@@ -1,0 +1,25 @@
+<li class="list-group-item">
+  <div class="row">
+    <div class="col">
+      <h2 style="display:inline;">{{title}}</h2>
+    </div>
+    <div class="col">
+      posté le {{created_at | date : 'short'}} 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+    <p>
+        {{content}}
+    </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="button" class="btn btn-default">{{loveIts}}Love it!</button>
+    </div>
+    <div class="col">
+      <button type="button" class="btn btn-default">Do not love it!</button>
+    </div>
+    </div>
+</li>
