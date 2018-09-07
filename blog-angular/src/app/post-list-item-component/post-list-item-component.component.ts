@@ -12,11 +12,16 @@ export class PostListItemComponentComponent implements OnInit {
   @Input()  content= "coucou content";
   @Input()  loveIts= 99;
   @Input()  created_at="test";
+  count;
 
   constructor() { 
   }
 
   ngOnInit() {
+  }
+
+  getCount(){
+    
   }
 
 }
