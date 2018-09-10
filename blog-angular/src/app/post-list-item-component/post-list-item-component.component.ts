@@ -8,20 +8,27 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class PostListItemComponentComponent implements OnInit {
 
-  @Input()  title="coucou titre";
-  @Input()  content= "coucou content";
-  @Input()  loveIts= 99;
+  @Input()  title="";
+  @Input()  content= "";
+  @Input()  loveIts= 0;
+  @Input()  doNotLoveIts=0;
   @Input()  created_at="test";
-  count;
 
   constructor() { 
   }
 
   ngOnInit() {
   }
-
-  getCount(){
-    
+  getColor(){
+    if(this.doNotLoveIts>this.loveIts)
+      return 'red';
+    return 'green';
+  }
+  onDontLoveIts(){
+    this.doNotLoveIts++;
+  }
+  onLoveIts(){
+    this.loveIts++;
   }
 
 }

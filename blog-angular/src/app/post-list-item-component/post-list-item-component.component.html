@@ -1,4 +1,6 @@
-<li class="list-group-item">
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': loveIts>doNotLoveIts,
+                'list-group-item-danger': loveIts<doNotLoveIts}">
   <div class="row">
     <div class="col">
       <h2 style="display:inline;">{{title}}</h2>
@@ -16,10 +18,10 @@
   </div>
   <div class="row">
     <div class="col">
-      <button type="button" class="btn btn-success">{{loveIts}}Love it!</button>
+      <button type="button" class="btn btn-success" (click)="onLoveIts()">{{loveIts}} Love it!</button>
     </div>
     <div class="col">
-      <button type="button" class="btn btn-danger">Do not love it!</button>
+      <button type="button" class="btn btn-danger" (click)="onDontLoveIts()">{{doNotLoveIts}} Do not love it!</button>
     </div>
     </div>
 </li>
